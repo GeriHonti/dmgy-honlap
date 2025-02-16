@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+    <style type="text/css">
+      body {
+        font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px;
+      }
+      nav ul {
+        display: flex;
+        gap: 15px;
+      }
+      nav ul li {
+        list-style: none;
+      }
+      nav ul li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black;
+        transition: background 0.3s;
+      }
+      nav ul li a.active {
+        background: green;
+      }
+
+    </style>
+    <title>Hogyan csináljuk?</title>
+  </head>
+  <body>
+    <main class="container">
+    	
+    	<nav aria-label="breadcrumb">
+  			<ul id="dynamic-nav">
+    			<li><a href="https://dmgy.org">/</a></li>
+	    		<li>Hogyan szoktuk?</li>
+  			</ul>
+			</nav>
+    	
+      <h1>Hogyan szoktuk?</h1>
+
+      <div> 
+        <h2>Istentisztelet</h2>
+        <ul>
+          
+          <li>Az alakalom elején a hozzánk érkező lelkész bemutatkozik, nagy vonalakban mesél a pályájáról. </li>
+          <li>Megkötés mentes rész</li>
+          <li>Úrvacsorát félkörben, kézben és kehelyből áldozunk.</li>
+          <li>Megkötés mentes rész</li>
+          <li>Hirdetések a presbitérum részétől</li>
+          <li>Az Istentisztelet végén a himnuszt énekeljük. </li>
+          <li>Áldás</li>
+          <li>Szeretetvendégség</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Kántori szolgálat</h2>
+        <ul>
+          <li>Énekeskönyvünk: <a href="https://dmgy.org/enekeskonyv.html">Link az énekeskönyvhöz (dmgy.org/enekeskonyv.html)</a></li>
+          <li>Kántori szolgálatot általában Orbán Katalin csinálja, aki chellista, a drezdai filharmonikus zenekarban.</li>
+          <li>Kérése, hogy a kottákat 1 héttel legkésőbb az Istentiszelet előtt megkapja.</li>
+          <li>Fellépése esetén nem tudja vállalni és akkor a gyülekezet megpróbálja pótolni a hiányát, lelkes, bátortalan, alig halható énekkel.</li>
+        </ul>
+      </div>
+
+      <div> 
+        <h2>Szállás</h2>
+        <ul>
+          <li>Családoknál.</li>
+          <li>Szombat délután/esti érkezéssel, Vasárnap családi programmal, majd hétfő reggeli utazással. </li>
+        </ul>
+      </div>
+
+      <div> 
+        <h2>Utazás - Magyarországról</h2>
+        <ul>
+          <li>Szombati Euroexpress vonat Drezdáig. </li>
+          <li>Hétfő reggeli Euroexpress vonat Budapestig. </li>
+          <li>Jegyek: Magyar Evangélikus Egyház vásárolja (2025 júniusig)</li>  
+        </ul>
+      </div>
+
+      <div> 
+        <h2>Utazás - Németországon belül</h2>
+        <ul>
+          <li>Jegyek: Németországi Magyarajkú Protestáns Gyülekezetek Szövetségébe (2025 márciusig)</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.getElementById("dynamic-nav");
+        const headings = document.querySelectorAll("h1, h2, h3");
+        
+        // Generate navigation links
+        headings.forEach(heading => {
+          const id = heading.textContent.replace(/\s+/g, '-').toLowerCase();
+          heading.id = id;
+
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `#${id}`;
+          a.textContent = heading.textContent;
+          li.appendChild(a);
+          nav.appendChild(li);
+        });
+
+        // Highlight active section on scroll
+        function highlightNav() {
+          let scrollPosition = window.scrollY + 100; 
+          let activeLink = null;
+
+          headings.forEach(heading => {
+            const sectionTop = heading.offsetTop;
+            if (scrollPosition >= sectionTop) {
+              activeLink = heading.id;
+            }
+          });
+
+          document.querySelectorAll("#dynamic-nav a").forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${activeLink}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", highlightNav);
+      });
+    </script>
+
+</html>
