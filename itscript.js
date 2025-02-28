@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("data.json")
+    fetch("data/data.json")
         .then(response => response.json())
         .then(data => {
             const today = new Date();
