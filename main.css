@@ -1,14 +1,133 @@
-body {
-            font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            color: #343a40;
-            margin: 20px;
-            padding: 20px;
-        }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body, html {
+height: 100%;
+font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+color: white;
+background: url('dd.jpg') no-repeat center center/cover;
+background-attachment: fixed;
+}
+
+a {
+    color: white;
+}
+
+.next-past{
+    padding-top: 1.5em;
+}
 
 h1 {
-            text-align: center;
-            color: #495057;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+text-align: center;
+color: white;
+font-size: 2.5em;
+margin-bottom: 0.5em;
+}
+
+/* Wrapper to allow scrolling */
+.wrapper {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+.content {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 50px 20px;
+min-height: 100vh;
+}
+
+.title-box {
+background: rgba(0, 0, 0, 0.6);
+padding: 20px 40px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title-box h1 {
+font-size: 5em;
+font-weight: bold;
+}
+
+/* Navigation Menu */
+.menu {
+list-style: none;
+display: flex;
+justify-content: center;
+margin-top: 20px;
+gap: 30px;
+}
+
+.menu li a {
+text-decoration: none;
+color: #fff;
+font-size: 2.5em;
+padding: 10px 20px;
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0.2);
+transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* New Section - Extra Content */
+.extra-content {
+padding: 50px 20px;
+min-height: 100vh;
+background: rgba(0, 0, 0, 0.4);
+text-align: center;
+}
+
+.extra-content p {
+max-width: 800px;
+margin: 20px auto;
+font-size: 1.2em;
+line-height: 1.6;
+}
+
+
+/* New Section - Extra Content */
+.extra-content-odd {
+padding: 50px 20px;
+min-height: 100vh;
+background: rgba(0, 0, 0, 0.7);
+text-align: center;
+}
+
+.extra-content p {
+max-width: 800px;
+margin: 20px auto;
+font-size: 1.2em;
+line-height: 1.6;
+}
+
+
+.justi {
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+.justi p {
+    padding: 1.2em;
+}
+/* Sticky Footer */
+.footer {
+background: rgba(0, 0, 0, 0.6);
+text-align: center;
+padding: 10px 20px;
+font-size: 1em;
+position: sticky;
+bottom: 0;
+width: 100%;
+}
+.footer p {
+margin: 0;
 }

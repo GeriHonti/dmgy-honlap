@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drezdai Magyar Gyülekezet - Menü</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drezdai Magyar Gyülekezet - Menü</title>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="itstyle.css">
+        <script src="itscript.js" defer></script>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <div class="background-image"></div>
+        
+        <div class="wrapper">
+            
+            <div class="content">
+                <div class="title-box">
+                    <h1>Drezdai Magyar Gyülekezet</h1>
+                    <ul class="menu">
+                        <li><a href="#it">Istentiszteletek</a></li>
+                        <li><a href="#rolunk">Rólunk</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Second Page - Scrollable -->
+            <div class="extra-content" id="it">
+                <div class="next-it">
+                    <h1>Következő Istentiszteletek</h1>
+                    <ul id="upcoming-list" class="fancy-list"></ul>
+                </div>
+                
+                <div class="next-past">
+                    <h1>Múlt alkalmak</h1>
+                    <ul id="past-list" class="fancy-list"></ul>
+                </div>
+                
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                        </div>
+                            <div id="popup-scrollable">
+                                <div id="popup-text"></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Second Page - Scrollable -->
+            <div class="extra-content-odd" id="rolunk">
+                <h1>Rólunk</h1>
+                <div class="justi">
+                    <p>
+                        A Drezdai Magyar Gyülekezet 2024. június 16-án, Gémes Pál stuttgarti lelkész igehirdetésével alakult meg. Azóta minden hónap második vasárnapján, 15:30-kor találkoznak a magyar nyelvű keresztények, felekezettől függetlenül, hogy együtt hallgassák Isten igéjét. Az alkalmakon általában 15 és 30 fő közötti létszámban gyűlnek össze.
+                    </p>
+                    <p>
+                        A Magyar Evangélikus Egyház 2025 júniusáig kitüntetett figyelemmel és támogatással gondozza a fekete városban élő magyar hívőket.
+                    </p>
+                    <p>
+                        Gémes Pált az igehirdetésben Dr. Pőcze István (Sopron-Ágfalva), Dr. Varga Pál (Ulm), Jávori Fülöp (Lipcse), Cselovszky Ferenc (Budapest), Baranyayné Rohn Erzsébet (Kőszeg) és Szemerei János (Győr) követték. A lelkészek szállását a gyülekezet tagjainak családjai biztosították, ahol nemcsak szállást, hanem vacsorát, reggelit és ebédet is közösen osztottak meg. Emellett közös túrákon és hosszú beszélgetéseken vettek részt.
+                    </p>
+                    
+                    <p>
+                        Igazi különlegességet csempész az istentiszteleti alkalmakba Orbán Katalin csellóművész, aki a gyülekezet kántora.
+                    </p>
+                    
+                    <p>
+                        A decemberi alkalommal Szemerei János püspök úr beiktatta a presbitériumot, amelynek tagjai: Bahnisch Ágnes, Dr. Honti Gergely és Dr. Kákay Attila. Magánéletében Ágnes a szociális ellátórendszerben szolgál, míg a két kutató a technológia és a fizika területén tevékenykedik.
+                    </p>
+                </div>
+            </div>
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            color: white;
-            overflow: hidden;
-        }
 
-        .background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: url('dd.jpg') no-repeat center center/cover;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-        }
-
-        .title-box {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .title-box h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-
-        /* Menu styles */
-        .menu {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 30px;
-        }
-
-        .menu li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.2);
-            transition: background-color 0.3s ease;
-        }
-
-        .menu li a:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-    </style>
-</head>
-<body>
-    <div class="background-image"></div>
-
-    <div class="content">
-        <div class="title-box">
-            <h1>Drezdai Magyar Gyülekezet</h1>
-            <ul class="menu">
-                <li><a href="https://dmgy.org/it.html">Istentiszteletek</a></li>
-                <li><a href="">Rólunk (még nincs feltöltve)</a></li>
-            </ul>
-        </div>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Drezdai Magyar Gyülekezet | Kapcsolat: <a href="mailto:presbiter@dmgy.org">presbiter@dmgy.org</a></p>
+    </footer>
+</div>
 </body>
 </html>
