@@ -9,8 +9,8 @@
   
   {
     "date": "2025-11-09",
-    "preacher-name": "???",
-    "card-color": "white",
+    "preacher-name": "Bence Imre (Budapest)",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -25,8 +25,8 @@
 
   {
     "date": "2025-09-14",
-    "preacher-name": "???",
-    "card-color": "white",
+    "preacher-name": "Bence Imre (Budapest)",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -41,8 +41,8 @@
 
   {
     "date": "2025-07-13",
-    "preacher-name": "???",
-    "card-color": "white",
+    "preacher-name": "Bence Imre (Budapest)",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -51,7 +51,7 @@
     "date": "2025-06-08",
     "preacher-name": "???",
     "card-color": "white",
-    "contributors": ["Angyal-Cseke Csaba"],
+    "contributors": [],
     "preach-text": ""
   },
 
