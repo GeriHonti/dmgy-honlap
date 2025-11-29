@@ -9,7 +9,7 @@
   {
     "date": "2026-11-08",
     "preacher-name": "Bence Imre",
-    "card-color": "white",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -23,7 +23,7 @@
   {
     "date": "2026-09-13",
     "preacher-name": "Bence Imre",
-    "card-color": "white",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -37,7 +37,7 @@
   {
     "date": "2026-07-12",
     "preacher-name": "Bence Imre",
-    "card-color": "white",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -50,8 +50,8 @@
   },
   {
     "date": "2026-05-10",
-    "preacher-name": "???",
-    "card-color": "white",
+    "preacher-name": "Cselovszky Ferenc (Budapest)",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -65,7 +65,7 @@
   {
     "date": "2026-03-08",
     "preacher-name": "Bence Imre",
-    "card-color": "white",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -79,7 +79,7 @@
   {
     "date": "2026-01-11",
     "preacher-name": "Bence Imre",
-    "card-color": "white",
+    "card-color": "green",
     "contributors": [],
     "preach-text": ""
   },
@@ -87,28 +87,28 @@
     "date": "2025-12-14",
     "preacher-name": "Gáncs Péter",
     "card-color": "green",
-    "contributors": [],
+    "contributors": ["Karácsonyi Anna (orgona)", "Weinberger Vanda (fuvola)"],
     "preach-text": ""
   },
   {
     "date": "2025-11-09",
     "preacher-name": "Bence Imre (Budapest)",
     "card-color": "green",
-    "contributors": [],
+    "contributors": ["Bence Imre (gitár)"],
     "preach-text": ""
   },
   {
     "date": "2025-10-12",
     "preacher-name": "Cselovszky Ferenc (Budapest)",
     "card-color": "green",
-    "contributors": [],
+    "contributors": ["Karácsonyi Anna (orgona)"],
     "preach-text": ""
   },
   {
     "date": "2025-09-14",
     "preacher-name": "Bence Imre (Budapest)",
     "card-color": "green",
-    "contributors": [],
+    "contributors": ["Bence Imre (gitár)"],
     "preach-text": ""
   },
   {
